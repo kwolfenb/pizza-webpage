@@ -15,8 +15,6 @@ function Pizza (size, toppings) {
   this.toppings = toppings;
 }
 
-
-
 Pizza.prototype.costPrototype = function() {
   var cost = 0;
   if (this.size === "small") {
@@ -32,7 +30,6 @@ Pizza.prototype.costPrototype = function() {
   }); 
   return cost;
 }
-
 
 
 // User Interface Logic for Pizza Website
@@ -75,7 +72,6 @@ function submitOrder() {
   $("#confirmGrandTotal").html(grandTotal);
   $("#orderConfirmName").text(inputName);
 }
-
 
 $(document).ready(function() {
   $("form#orderForm").submit(function(event) {

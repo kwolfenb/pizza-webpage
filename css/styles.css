@@ -1,11 +1,11 @@
 body {
-  background-color: #3a3a3a;
+  background-color: #343434
+  ;
   color: white;
 }
 #showOrder {
   display: none;
 }
-
 #header {
   text-align: right;
   /* font-family: fantasy; */
@@ -21,32 +21,25 @@ body {
 #orderName {
   width: 50%;
 }
-
 h6, h4, hr {
   margin-top: 30px;
   color: #fff187;
 }
-
 #addToOrderButton {
   width: 50%;
   margin: auto;
   margin-top: 5%;
   margin-bottom: 10%;
 }
-
-
 .orderCost {
   text-align: center;
   margin-right: 10%;
 }
-
 #submitOrderButton {
   width: 50%;
   margin-top: 5%;
   margin-left: 25%;
 }
-
-
 #showFinalConfirmation {
   display: none;
   position: fixed;
@@ -60,7 +53,6 @@ h6, h4, hr {
   height: 73%;
   border-radius: 12px;
 }
-
 #showFinalConfirmation h4 {
   color: white;
   text-align: center;
