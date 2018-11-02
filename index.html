@@ -5,9 +5,130 @@
     <script src="js/scripts.js"></script>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css"  rel="stylesheet" type="text/css">
-    <title></title>
+    <title>Luigi's Pizza</title>
   </head>
   <body>
+    <h1>Luigi's Pizza</h1>
+    <h4>Serving the Seattle area since 2018</h4>
+    <div class="container">
+      <h5>Place your online order here:</h5>
+      <form id="orderForm">
+        <div class="form-group">
+          <h6 id="nameLabel">Name</h6>
+          <input type="text" class="form-control" id="orderName">
+        </div>
 
+<!-- Choose Size -->
+
+        <h6 id="sizeLabel">Which size pizza would you like?</h6>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="orderSize" id="orderSmall" value="small" checked>
+            <label class="form-check-label" for="orderSmall">
+              Small
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="orderSize" id="orderMedium" value="medium">
+            <label class="form-check-label" for="orderMedium">
+              Medium
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <input class="form-check-input" type="radio" name="orderSize" id="orderLarge" value="large">
+            <label class="form-check-label" for="orderLarge">
+              Large
+            </label>
+          </div>
+          <div class="form-check disabled">
+            <input class="form-check-input" type="radio" name="orderSize" id="orderXLarge" value="xlarge">
+            <label class="form-check-label" for="orderXLarge">
+              Extra Large
+            </label>
+          </div>
+
+<!-- Choose Toppings -->
+
+          <h6 id="toppingsLabel">Choose your toppings below! $1.75 per topping.</h6>
+          <div class="row">
+            <div class="col-md">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="extraCheese" id="orderExtraCheese">
+                <label class="custom-control-label" for="orderExtraCheese">Extra Cheese</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="pepperoni" id="orderPepperoni">
+                <label class="custom-control-label" for="orderPepperoni">Pepperoni</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="mushrooms" id="orderMushrooms">
+                <label class="custom-control-label" for="orderMushrooms">Mushrooms</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="pineapple" id="orderPineapple">
+                <label class="custom-control-label" for="orderPineapple">Pineapple</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="canadianBacon" id="orderCanadianBacon">
+                <label class="custom-control-label" for="orderCanadianBacon">Canadian Bacon</label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="sausage" id="orderSausage">
+                <label class="custom-control-label" for="orderSausage">Italian Sausage</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="onions" id="orderOnions">
+                <label class="custom-control-label" for="orderOnions">Onions</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="bacon" id="orderBacon">
+                <label class="custom-control-label" for="orderBacon">Bacon</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="spinach" id="orderSpinach">
+                <label class="custom-control-label" for="orderSpinach">Spinach</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="pesto" id="orderPesto">
+                <label class="custom-control-label" for="orderPesto">Pesto</label>
+              </div>
+            </div>
+            <div class="col-md">
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="peppers" id="orderPeppers">
+                <label class="custom-control-label" for="orderPeppers">Green Peppers</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="black olives" id="orderBlackOllives">
+                <label class="custom-control-label" for="orderBlackOllives">Black Olives</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="chicken" id="orderChicken">
+                <label class="custom-control-label" for="orderChicken">Chicken</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="basil" id="orderBasil">
+                <label class="custom-control-label" for="orderBasil">Fresh Basil</label>
+              </div>
+              <div class="custom-control custom-checkbox">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="beef" id="orderBeef">
+                <label class="custom-control-label" for="orderBeef">Beef</label>
+              </div>
+            </div>
+          </div>
+
+          
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Place Order</button>
+
+      </form>
+      <div id="showOrder">
+        <h6>Please review your order:</h6>
+        <p id="orderDetails"></p>
+        <h6>Cost:</h6>
+        <p id="orderCost"></p>
+      </div>
+
+    </div>
   </body>
 </html>
