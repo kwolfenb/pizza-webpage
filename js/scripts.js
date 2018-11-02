@@ -1,8 +1,9 @@
 // Business Logic for Pizza Website
 
-function Pizza (size, toppings) {
+function Pizza (size, toppings, id) {
   this.size = size;
-  this.toppings = toppings
+  this.toppings = toppings;
+  this.id = id
 }
 
 
@@ -45,8 +46,8 @@ function orderFunction() {
 function showOrderDetails(pizza, cost) {
   orderTotalCost += cost;
   $("#showOrder").show();
-  $("#orderDetails").append("<li>1 " + pizza.size + "pizza with " + pizza.toppings +"</li>");
-  $("#orderItemCost").append("<li>" + cost + "</li>");
+  $("#orderDetails").append("<tr><td>1 " + pizza.size + " pizza with " + pizza.toppings.join(", ") +"</td> <td>" + cost + "</td></tr>");
+  
   $("#orderCost").html(orderTotalCost);
   console.log(orderTotalCost);
 }

@@ -7,17 +7,10 @@
   width: 50%;
   margin: auto;
   margin-top: 5%;
-}
-
-ul {
-  list-style: none;
-}
-
-.tableheader {
-  width: 50%;
+  margin-bottom: 10%;
 }
 
 
-#cost {
+.orderCost {
   text-align: right;
 }

@@ -124,37 +124,16 @@
       </form>
       <div id="showOrder">
         <h6>Please review your order</h6>
-        <p>You ordered:</p>
-        <div class="row">
-          <div class="col-sm-8">
-            <ul id="orderDetails">
-            </ul>
-          </div>
-          <div class="col-sm-4" id="cost">
-            <ul id="orderItemCost">
-            </ul>
-            <h6>Current Subtotal:</h6>
-            <p id="orderCost"></p>
-          </div>
-        </div>
+        <table class="table table-hover" id="orderDetails">
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Cost</th>
+            </tr>
+          </thead>
+        </table>
+        <h6 class="orderCost">Subtotal: <span id="orderCost"></span></h6>
       </div>
-      <!-- <table class="table table-hover">
-        <thead>
-          <tr>
-            <th class="w-25">#</th>
-            <th class="w-25">#</th>
-          </tr>
-        </thead>
-            <tr>
-              <td>Mark</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <td>Jacob</td>
-              <td>@fat</td>
-            </tr>
-        </table> -->
-
     </div>
   </body>
 </html>
