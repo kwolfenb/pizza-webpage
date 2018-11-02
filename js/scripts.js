@@ -80,7 +80,6 @@ $(document).ready(function() {
     event.preventDefault(); 
     orderFunction();
   })
-
   $("#submitOrderButton").click(function() {
     submitOrder();
   });
@@ -89,9 +88,11 @@ $(document).ready(function() {
       location.reload();
     }
   });
-  
   $("#returnToOrderButton").click(function() {
       $("#showFinalConfirmation").hide();
-
+  });
+  $("#confirmOrderButton").click(function() {
+      alert("Your order has been successfully placed. Thank you for your business.");
+      location.reload();
   });
 });

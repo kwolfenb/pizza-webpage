@@ -1,7 +1,23 @@
+body {
+  background-color: #3a3a3a;
+  color: white;
+}
 #showOrder {
   display: none;
 }
 
+#header {
+  text-align: right;
+  /* font-family: fantasy; */
+  padding-right: 200px;
+  color: #f2ef3c;
+  padding-top: 25px;
+  background: url("../img/pizza1.jpg");
+  background-color: black;
+  height: 200px;
+  background-size: cover;
+  box-shadow: 0 0 8px 8px #3a3a3a inset;
+}
 #orderName {
   width: 50%;
 }
@@ -38,6 +54,7 @@ h6, hr {
   margin: auto;
   border: 2px solid black;
   background-color: #c7d4e2;
+  color: black;
   width: 50%;
   height: 63%;
   border-radius: 12px;

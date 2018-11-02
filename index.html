@@ -8,8 +8,10 @@
     <title>Luigi's Pizza</title>
   </head>
   <body>
-    <h1>Luigi's Pizza</h1>
-    <h4>Serving the Seattle area since 2018</h4>
+    <div id="header">
+      <h1>Luigi's Pizza</h1>
+      <h4>Serving the Seattle area since 2018</h4>
+    </div>
     <div class="container">
       <h5>Place your online order here:</h5>
       <form id="orderForm">
@@ -54,7 +56,7 @@
           <div class="row">
             <div class="col-md">
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" name="orderToppings" class="custom-control-input" value="extraCheese" id="orderExtraCheese">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="extra cheese" id="orderExtraCheese">
                 <label class="custom-control-label" for="orderExtraCheese">Extra Cheese</label>
               </div>
               <div class="custom-control custom-checkbox">
@@ -70,7 +72,7 @@
                 <label class="custom-control-label" for="orderPineapple">Pineapple</label>
               </div>
               <div class="custom-control custom-checkbox">
-                <input type="checkbox" name="orderToppings" class="custom-control-input" value="canadianBacon" id="orderCanadianBacon">
+                <input type="checkbox" name="orderToppings" class="custom-control-input" value="canadian bacon" id="orderCanadianBacon">
                 <label class="custom-control-label" for="orderCanadianBacon">Canadian Bacon</label>
               </div>
             </div>
@@ -135,7 +137,7 @@
           </thead>
         </table>
         <h5 class="orderCost">Subtotal: <span id="orderCost"></span></h5>
-        <button type="button" class="btn btn-success btn-lg" id="submitOrderButton">Place Order</button>
+        <button type="button" class="btn btn-success btn-lg" id="submitOrderButton">Procede to Checkout</button>
       </div>
       <div id="showFinalConfirmation">
         <div class="row">
