@@ -14,9 +14,10 @@
       <h5>Place your online order here:</h5>
       <form id="orderForm">
         <div class="form-group">
-          <h6 id="nameLabel">Name</h6>
+          <h6>Name</h6>
           <input type="text" class="form-control" id="orderName">
         </div>
+        <hr>
 
 <!-- Choose Size -->
 
@@ -24,27 +25,28 @@
         <div class="form-check">
             <input class="form-check-input" type="radio" name="orderSize" id="orderSmall" value="small" checked>
             <label class="form-check-label" for="orderSmall">
-              Small
+              Small ($7.50)
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="orderSize" id="orderMedium" value="medium">
             <label class="form-check-label" for="orderMedium">
-              Medium
+              Medium ($10.50)
             </label>
           </div>
           <div class="form-check disabled">
             <input class="form-check-input" type="radio" name="orderSize" id="orderLarge" value="large">
             <label class="form-check-label" for="orderLarge">
-              Large
+              Large ($14.00)
             </label>
           </div>
           <div class="form-check disabled">
             <input class="form-check-input" type="radio" name="orderSize" id="orderXLarge" value="xlarge">
             <label class="form-check-label" for="orderXLarge">
-              Extra Large
+              Extra Large ($17.00)
             </label>
           </div>
+          <hr>
 
 <!-- Choose Toppings -->
 
@@ -119,7 +121,7 @@
           </div>
 
           
-        <button type="submit" class="btn btn-primary btn-lg btn-block" id="addToOrder">Add to Order</button>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="addToOrderButton">Add to Order</button>
 
       </form>
       <div id="showOrder">
@@ -132,7 +134,32 @@
             </tr>
           </thead>
         </table>
-        <h6 class="orderCost">Subtotal: <span id="orderCost"></span></h6>
+        <h5 class="orderCost">Subtotal: <span id="orderCost"></span></h5>
+        <button type="button" class="btn btn-success btn-lg" id="submitOrderButton">Place Order</button>
+      </div>
+      <div id="showFinalConfirmation">
+        <div class="row">
+          <div class="col">
+            
+            <h4>Order Confirmation</h4>
+            <ul id="orderConfirm">
+              <li>Subtotal: </li>
+              <li>Tax: </li>
+              <li>Delivery Fee: </li>
+              <li><strong>Total:</strong></li>
+            </ul>
+            <ul id="orderConfirmCosts">
+              <li>$<span id="confirmSubtotal"></span> </li>
+              <li>$<span id="confirmTax"></span></li>
+              <li>$ 3.00</li>
+              <li><strong>$<span id="confirmGrandTotal"></span></strong></li>
+            </ul>
+
+            <button type="button" class="btn btn-success" id="confirmOrderButton">Confirm Order</button>
+            <button type="button" class="btn btn-warning" id="cancelOrderButton">Cancel Order</button>
+            
+          </div>
+        </div>
       </div>
     </div>
   </body>

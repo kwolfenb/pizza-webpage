@@ -2,8 +2,15 @@
   display: none;
 }
 
+#orderName {
+  width: 50%;
+}
 
-#addToOrder {
+h6, hr {
+  margin-top: 30px;
+}
+
+#addToOrderButton {
   width: 50%;
   margin: auto;
   margin-top: 5%;
@@ -12,5 +19,57 @@
 
 
 .orderCost {
+  text-align: center;
+  margin-right: 10%;
+}
+
+#submitOrderButton {
+  width: 50%;
+  margin-top: 5%;
+  margin-left: 25%;
+}
+
+
+#showFinalConfirmation {
+  display: none;
+  position: fixed;
+  left: 25%;
+  top: 35%;
+  margin: auto;
+  border: 2px solid black;
+  width: 50%;
+  height: 60%;
+  background-color: red;
+  border-radius: 12px;
+}
+
+#showFinalConfirmation h4 {
+  text-align: center;
+  background-color: white;
+  padding-top: 15px;
+  height: 65px;
+  border-radius: 10px;
+  border: 1px solid black;
+
+}
+#confirmOrderButton {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 2%;
+}
+#cancelOrderButton {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 1%;
+}
+#orderConfirm {
+  float: left;
+  margin-left: 40px;
+  margin-top: 35px;
+}
+#orderConfirmCosts {
   text-align: right;
+  margin-right: 50px;
+  list-style: none;
+  margin-top: 35px;
 }

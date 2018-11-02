@@ -1,9 +1,18 @@
 // Business Logic for Pizza Website
 
-function Pizza (size, toppings, id) {
+function Order (customerName, pizzas, orderTotal) {
+  this.customerName = customerName;
+  this.pizzas = [];
+  this.orderTotal = orderTotal
+}
+
+Order.prototype.addPizzaPrototype = function(pizza) {
+  this.pizzas.push(pizza);
+}
+
+function Pizza (size, toppings) {
   this.size = size;
   this.toppings = toppings;
-  this.id = id
 }
 
 
@@ -29,6 +38,7 @@ Pizza.prototype.costPrototype = function() {
 // User Interface Logic for Pizza Website
 
 var orderTotalCost = 0;
+var newOrder = new Order();
 
 function orderFunction() {
   var orderSize = $("input:radio[name=orderSize]:checked").val();
@@ -37,19 +47,31 @@ function orderFunction() {
     toppingsArray.push($(this).val());
   }); 
   var newPizza = new Pizza (orderSize, toppingsArray);
+  newOrder.addPizzaPrototype(newPizza);
+  newOrder.customerName = $("#orderName").val();
+  console.log(newOrder);
   var cost = newPizza.costPrototype();
   $("input:checkbox[name=orderToppings]:checked").prop('checked',false);
   showOrderDetails(newPizza, cost);
-
 }
 
 function showOrderDetails(pizza, cost) {
   orderTotalCost += cost;
   $("#showOrder").show();
-  $("#orderDetails").append("<tr><td>1 " + pizza.size + " pizza with " + pizza.toppings.join(", ") +"</td> <td>" + cost + "</td></tr>");
-  
-  $("#orderCost").html(orderTotalCost);
+  $("#orderDetails").append("<tr><td>1 " + pizza.size + " pizza with " + pizza.toppings.join(", ") +"</td> <td> $ " + cost.toFixed(2) + "</td></tr>");
+  $("#orderCost").html("$ " + orderTotalCost.toFixed(2));
   console.log(orderTotalCost);
+}
+
+function submitOrder() {
+  $("#showFinalConfirmation").show();
+  var taxCost = (Math.round(orderTotalCost*.10*100)/100);
+  var grandTotal = taxCost + orderTotalCost;
+  newOrder.orderTotal = grandTotal;
+  console.log(newOrder);
+  $("#confirmSubtotal").html(orderTotalCost);
+  $("#confirmTax").html(taxCost);
+  $("#confirmGrandTotal").html(grandTotal);
 }
 
 
@@ -57,8 +79,9 @@ $(document).ready(function() {
   $("form#orderForm").submit(function(event) {
     event.preventDefault(); 
     orderFunction();
-
-
-    
   })
-})
+
+  $("#submitOrderButton").click(function() {
+    submitOrder();
+  });
+});
