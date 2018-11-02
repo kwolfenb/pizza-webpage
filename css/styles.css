@@ -1,0 +1,23 @@
+#showOrder {
+  display: none;
+}
+
+
+#addToOrder {
+  width: 50%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+ul {
+  list-style: none;
+}
+
+.tableheader {
+  width: 50%;
+}
+
+
+#cost {
+  text-align: right;
+}

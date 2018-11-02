@@ -27,6 +27,8 @@ Pizza.prototype.costPrototype = function() {
 
 // User Interface Logic for Pizza Website
 
+var orderTotalCost = 0;
+
 function orderFunction() {
   var orderSize = $("input:radio[name=orderSize]:checked").val();
   var toppingsArray = [];
@@ -35,13 +37,18 @@ function orderFunction() {
   }); 
   var newPizza = new Pizza (orderSize, toppingsArray);
   var cost = newPizza.costPrototype();
+  $("input:checkbox[name=orderToppings]:checked").prop('checked',false);
   showOrderDetails(newPizza, cost);
+
 }
 
 function showOrderDetails(pizza, cost) {
+  orderTotalCost += cost;
   $("#showOrder").show();
-  $("#orderDetails").text(pizza.size);
-  $("#orderCost").html(cost);
+  $("#orderDetails").append("<li>1 " + pizza.size + "pizza with " + pizza.toppings +"</li>");
+  $("#orderItemCost").append("<li>" + cost + "</li>");
+  $("#orderCost").html(orderTotalCost);
+  console.log(orderTotalCost);
 }
 
 
