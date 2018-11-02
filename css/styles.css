@@ -9,7 +9,7 @@ body {
 #header {
   text-align: right;
   /* font-family: fantasy; */
-  padding-right: 200px;
+  padding-right: 125px;
   color: #f2ef3c;
   padding-top: 25px;
   background: url("../img/pizza1.jpg");
@@ -22,8 +22,9 @@ body {
   width: 50%;
 }
 
-h6, hr {
+h6, h4, hr {
   margin-top: 30px;
+  color: #fff187;
 }
 
 #addToOrderButton {
@@ -50,13 +51,13 @@ h6, hr {
   display: none;
   position: fixed;
   left: 25%;
-  top: 35%;
+  top: 16%;
   margin: auto;
   border: 2px solid black;
   background-color: #c7d4e2;
   color: black;
   width: 50%;
-  height: 63%;
+  height: 73%;
   border-radius: 12px;
 }
 
@@ -68,7 +69,9 @@ h6, hr {
   height: 65px;
   border-radius: 10px;
   border: 1px solid black;
-
+}
+#showFinalConfirmation h6 {
+  text-align: center;
 }
 #confirmOrderButton {
   width: 60%;
@@ -88,11 +91,11 @@ h6, hr {
 #orderConfirm {
   float: left;
   margin-left: 40px;
-  margin-top: 35px;
+  margin-top: 15px;
 }
 #orderConfirmCosts {
   text-align: right;
   margin-right: 50px;
   list-style: none;
-  margin-top: 35px;
+  margin-top: 15px;
 }

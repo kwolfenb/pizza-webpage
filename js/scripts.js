@@ -25,7 +25,7 @@ Pizza.prototype.costPrototype = function() {
     cost += 10.5;
   } else if (this.size === "large") {
     cost += 14;
-  } else if (this.size === "xlarge") {
+  } else if (this.size === "extra large") {
     cost += 17
   } this.toppings.forEach(function() {
     cost += 1.75;
@@ -67,11 +67,13 @@ function submitOrder() {
   $("#showFinalConfirmation").show();
   var taxCost = (Math.round(orderTotalCost*.10*100)/100);
   var grandTotal = taxCost + orderTotalCost;
+  var inputName = newOrder.customerName;
   newOrder.orderTotal = grandTotal;
   console.log(newOrder);
   $("#confirmSubtotal").html(orderTotalCost.toFixed(2));
   $("#confirmTax").html(taxCost);
   $("#confirmGrandTotal").html(grandTotal);
+  $("#orderConfirmName").text(inputName);
 }
 
 
@@ -92,7 +94,7 @@ $(document).ready(function() {
       $("#showFinalConfirmation").hide();
   });
   $("#confirmOrderButton").click(function() {
-      alert("Your order has been successfully placed. Thank you for your business.");
+      alert("Thank you " + newOrder.customerName + "! Your order has been successfully placed. Expect delivery in about 20 minutes.");
       location.reload();
   });
 });

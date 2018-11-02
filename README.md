@@ -6,12 +6,14 @@
 
 ## Description
 
-_This webpage allows a user to order a pizza with options such as size and toppings._
+_This webpage allows a user to order a pizza with options such as size and toppings. Page demonstrates use of Objects, constructors and prototypes._
 
 ### Specs
 | Spec | Input | Output |
 | :-------------     | :------------- | :------------- |
-
+| Webpage accepts user's selction of pizza size and ingredients and adds them to pizza object. |"medium", "pepperoni" | this.toppings = ["pepperoni"], this.size ="medium" |
+| Webpage uses a prototype function including ingredients and pizza size to compute price of a pizza object | pizza.costPrototype |  if else statements to calculate price |
+| Program displays list of pizzas and costs | "small", "pepperoni" | $9.25  |
 
 
 ## Setup/Installation Requirements
