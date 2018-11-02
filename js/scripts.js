@@ -69,7 +69,7 @@ function submitOrder() {
   var grandTotal = taxCost + orderTotalCost;
   newOrder.orderTotal = grandTotal;
   console.log(newOrder);
-  $("#confirmSubtotal").html(orderTotalCost);
+  $("#confirmSubtotal").html(orderTotalCost.toFixed(2));
   $("#confirmTax").html(taxCost);
   $("#confirmGrandTotal").html(grandTotal);
 }
@@ -83,5 +83,15 @@ $(document).ready(function() {
 
   $("#submitOrderButton").click(function() {
     submitOrder();
+  });
+  $("#cancelOrderButton").click(function() {
+    if(confirm("This will clear your current order. Are you sure you want to proceed?") === true) {
+      location.reload();
+    }
+  });
+  
+  $("#returnToOrderButton").click(function() {
+      $("#showFinalConfirmation").hide();
+
   });
 });
