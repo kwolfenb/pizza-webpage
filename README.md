@@ -28,7 +28,7 @@ _N/A_
 
 ## Link to Gh-Pages
 
-_[https://kwolfenb.github.io/pizza-webpage/] (https://kwolfenb.github.io/pizza-webpage/)_
+_[kwolfenb.github.io/pizza-webpage/](https://kwolfenb.github.io/pizza-webpage/)_
 
 
 ## Support and contact details
